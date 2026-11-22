@@ -1,1 +1,1 @@
-Muse write-access test. This file is safe to delete.
+Muse write-access test. Updated once to verify file updates work.
