@@ -34,10 +34,10 @@ jobs:
     name: Deploy
     steps:
       - name: 📥 Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 🔧 Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: '22'
 
@@ -97,7 +97,7 @@ jobs:
       # 声明创建 DO namespace（幂等：已存在则跳过），无需单独命令。
       # 前提：MetricsBroadcaster 类必须从 index.js 导出（已通过 src/index.js 实现）。
       - name: 🚀 Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
