@@ -32,13 +32,6 @@ class_name = "MetricsBroadcaster"
 tag = "v1"
 new_sqlite_classes = ["MetricsBroadcaster"]
 
-# Workers VPC：内网 ding-notifier（经 Cloudflare Tunnel）
-# service_id 是 VPC Service 的资源编号，不是密钥，可直接写在仓库里
-[[vpc_services]]
-binding = "DING_NOTIFIER"
-service_id = "01a20be8-2887-7823-8543-5c41ecaebdd7"
-remote = true
-
 # 开发服务器配置
 [dev]
 port = 8787
